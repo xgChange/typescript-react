@@ -1,10 +1,10 @@
 import React from 'react'
-import MyTest from './components/test'
+import MyLayout from './layout/index'
 
 const App: React.FC = () => (
-  <div>
-    <MyTest name="dy" sex="woman"/>
-  </div>
+  <>
+    <MyLayout />
+  </>
 )
 
 export default App

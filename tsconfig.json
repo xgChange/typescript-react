@@ -26,6 +26,7 @@
     "src"
   ],
   "exclude": [
+    "src/assets/icons",
     "node_modules"
   ]
 }

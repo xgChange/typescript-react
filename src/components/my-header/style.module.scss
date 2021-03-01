@@ -1,0 +1,53 @@
+$navHeight: 80px;
+
+.header-container {
+  width: 100%;
+  height: $navHeight;
+  box-shadow: 0px 1px 10px #888888;
+  text-align: left;
+  background-color: #4c9e9c;
+  display: flex;
+
+  .header-left {
+    cursor: pointer;
+    width: 230px;
+    background-color: #3a8b8a;
+    display: inline-block;
+    padding: 17.5px 10px 17.5px 10px;
+    height: 100%;
+
+    svg {
+      width: 45px;
+      height: 45px;
+      vertical-align: middle;
+      margin-left: 20px;
+    }
+
+    .title {
+      font-size: 28px;
+      color: #eef5f5;
+      padding-left: 10px;
+      vertical-align: middle;
+    }
+  }
+
+  .header-middle {
+    flex: 1;
+    .middle-input {
+      input {
+        border-color: transparent;
+        background: transparent;
+        border-bottom: 1px dashed #d9d9d9;
+        color: #d9d9d9;
+        font-size: 18px;
+      }
+      label {
+        text-align: center;
+        width: 148px;
+        color: #fff;
+        opacity: 0.5;
+        font-size: 19px;
+      }
+    }
+  }
+}

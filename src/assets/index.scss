@@ -1,1 +1,29 @@
-@import '../../node_modules/normalize.css/normalize'
+@import '../../node_modules/normalize.css/normalize';
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  background-color: #e6e6e6;
+}
+
+.top-bot-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  overflow: auto;
+  margin-top: 10px;
+}
+
+.all-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
