@@ -1,7 +1,10 @@
 import React from 'react'
+import MyTest from './components/test'
 
-function App() {
-  return <div>hello world</div>
-}
+const App: React.FC = () => (
+  <div>
+    <MyTest name="dy" sex="woman"/>
+  </div>
+)
 
 export default App
