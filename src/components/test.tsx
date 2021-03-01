@@ -8,12 +8,7 @@ interface TestProps {
 }
 
 const MyTest = ({ name, age, sex }: PropsWithChildren<TestProps>) => {
-  const [state, setState] = useState('')
-  useEffect(() => {
-    setTimeout(() => {
-      setState('10')
-    }, 2000)
-  }, [])
+  const [state] = useState('')
   return (
     <div className={styles.container}>
       我是MyTest组件
