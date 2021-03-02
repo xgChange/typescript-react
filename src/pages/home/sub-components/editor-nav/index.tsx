@@ -1,12 +1,12 @@
 import React, {memo} from 'react'
 
 import { Tabs } from 'antd'
-import TitleCom from '../../../../components/title-com'
+import TitleCom from 'src/components/title-com'
 import NavPanel from '../editor-nav-panel'
 const {TabPane} = Tabs
 
 import styles from './style.module.scss'
-import {NavPanelData} from '../../../../mock/index'
+import {NavPanelData} from 'src/mock/index'
 
 const MyEditorNav: React.FC = () => {
   return (
