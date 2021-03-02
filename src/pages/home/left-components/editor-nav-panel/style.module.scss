@@ -1,19 +1,18 @@
 .editor-panel {
-  // 
   width: 400px;
   :global {
-    .ant-collapse-borderless{
+    .ant-collapse-borderless {
       background-color: #414750;
       .ant-collapse-item {
         border-color: transparent;
-        .ant-collapse-header{
+        .ant-collapse-header {
           color: #e5e5e5;
           user-select: none;
         }
-        .ant-collapse-content{
+        .ant-collapse-content {
           color: #e5e5e5;
         }
-        .ant-collapse-content-box{
+        .ant-collapse-content-box {
           padding-bottom: 4px;
         }
       }

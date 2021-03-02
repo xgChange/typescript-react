@@ -1,0 +1,14 @@
+.self-education {
+  :global {
+    label {
+      color: #e5e5ee;
+    }
+    .ant-form-item {
+      &:last-child {
+        .ant-form-item-control {
+          padding-left: 76px;
+        }
+      }
+    }
+  }
+}

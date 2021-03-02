@@ -3,27 +3,28 @@
   .editor-tabs {
     height: 100%;
     :global {
-      .ant-tabs-nav-wrap{
-        background-color: #262B30;
-        .ant-tabs-tab{
+      .ant-tabs-nav-wrap {
+        background-color: #262b30;
+        .ant-tabs-tab {
           color: #ccc;
-          opacity: .7;
+          opacity: 0.7;
           padding: 24px;
-          &-active{
+          &-active {
             background-color: #414750;
             opacity: 1;
-            .ant-tabs-tab-btn{
+            .ant-tabs-tab-btn {
               color: #fff;
             }
           }
         }
-        .ant-tabs-ink-bar{
+        .ant-tabs-ink-bar {
           background-color: transparent;
         }
       }
       .ant-tabs-content-holder {
         background-color: #414750;
-        .ant-tabs-tabpane{
+        overflow: auto;
+        .ant-tabs-tabpane {
           padding-left: 0;
         }
       }
