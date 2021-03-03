@@ -51,8 +51,8 @@ export const NavPanelData: PanelDataObj[] = [
     id: 1008,
     text: '校园经历',
     icon: '',
-    type: 'SelfSchool'
-  }
+    type: 'SelfSchool',
+  },
 ]
 
 export const SexOption = [
@@ -60,13 +60,13 @@ export const SexOption = [
     id: 100,
     name: '男',
     enName: 'man',
-    value: 1,
+    value: '男',
   },
   {
     id: 101,
     name: '女',
     enName: 'women',
-    value: 0,
+    value: '女',
   },
 ]
 
@@ -74,41 +74,41 @@ export const eduOption = [
   {
     id: 110,
     name: '博士后',
-    value: 1,
+    value: '博士后',
   },
   {
     id: 111,
     name: '博士',
-    value: 2,
+    value: '博士',
   },
   {
     id: 112,
     name: '硕士',
-    value: 3,
+    value: '硕士',
   },
   {
     id: 113,
     name: '本科',
-    value: 4,
+    value: '本科',
   },
   {
     id: 114,
     name: '专科',
-    value: 5,
+    value: '专科',
   },
   {
     id: 115,
     name: '高中',
-    value: 6,
+    value: '高中',
   },
   {
     id: 116,
     name: '初中',
-    value: 7,
+    value: '初中',
   },
   {
     id: 117,
     name: '小学',
-    value: 1,
+    value: '小学',
   },
 ]

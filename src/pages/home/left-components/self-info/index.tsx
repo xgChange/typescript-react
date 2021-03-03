@@ -1,12 +1,14 @@
 /**
  * @description 个人信息 组件
  */
-import React, { memo } from 'react'
+import React, { memo, useCallback } from 'react'
 import { Form, Input, Select, Button } from 'antd'
 
 import styles from './style.module.scss'
 import { SexOption } from 'src/mock/index'
 import { phonePattern, numberPattern } from 'src/utils/index'
+import { useDispatch } from 'react-redux'
+import { changeSelfInfo } from '../../store'
 
 const layout = {
   labelCol: { span: 5 },
@@ -14,9 +16,16 @@ const layout = {
 }
 
 const MyForm: React.FC = () => {
-  const finished = (values: any) => {
-    console.log(values)
-  }
+  // redux hook
+  const dispatch = useDispatch()
+
+  const finished = useCallback(
+    (values: any) => {
+      dispatch(changeSelfInfo(values))
+    },
+    [dispatch]
+  )
+
   return (
     <div className={styles['self-info-container']}>
       <Form {...layout} name="basic" onFinish={finished}>
