@@ -47,6 +47,12 @@ export const NavPanelData: PanelDataObj[] = [
     icon: '',
     type: 'SelfSkill',
   },
+  {
+    id: 1008,
+    text: '校园经历',
+    icon: '',
+    type: 'SelfSchool'
+  }
 ]
 
 export const SexOption = [

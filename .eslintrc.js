@@ -12,7 +12,9 @@ module.exports = {
     },
   },
   rules: {
-    indent: ['off', 2],
+    indent: ['warn', 2, {
+      'SwitchCase': 1
+    }],
     quotes: [
       1,
       'single',
@@ -27,5 +29,7 @@ module.exports = {
     'prefer-spread': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-empty-function': 'off',
+    '@typescript-eslint/no-explicit-any': 'off'
+    'react/no-children-prop': 'off'
   },
 }
