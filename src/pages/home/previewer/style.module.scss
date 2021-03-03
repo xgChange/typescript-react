@@ -1,0 +1,19 @@
+.previewer {
+  flex: 1;
+  padding: 12px;
+  .top-title {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 5px;
+    text-align: right;
+    .previewer-btn {
+      display: inline-block;
+    }
+  }
+
+  .container {
+    height: 100%;
+    overflow: auto;
+    background-color: #ffffff;
+  }
+}
