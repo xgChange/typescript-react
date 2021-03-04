@@ -8,6 +8,8 @@ body,
   background-color: #e6e6e6;
 }
 
+ol
+
 /* 设置滚动条的样式 */
 ::-webkit-scrollbar {
   width: 8px;
@@ -43,4 +45,26 @@ body,
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.colum {
+  &-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  &-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.gap-padding {
+  padding-bottom: 10px;
 }

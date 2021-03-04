@@ -31,8 +31,8 @@ const FormCommon = ({ field, label, onFinished }: PropsWithChildren<FormConfig>)
     (values: any, index: number) => {
       const time = values[field[2]]
       if (time && time.length > 0) {
-        const startTime = moment(time[0]).format('YYYY-MM')
-        const endTime = moment(time[1]).format('YYYY-MM')
+        const startTime = moment(time[0]).format('YYYY/MM')
+        const endTime = moment(time[1]).format('YYYY/MM')
         const forMatInfo = Object.assign(
           { ...values },
           {

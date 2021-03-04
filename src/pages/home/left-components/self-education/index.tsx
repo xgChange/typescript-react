@@ -28,8 +28,8 @@ const SelfEducation: React.FC = () => {
   const finished = useCallback(
     (values: any, index: number) => {
       if (values.eduTime && values.eduTime.length > 0) {
-        const startTime = moment(values.eduTime[0]).format('YYYY-MM')
-        const endTime = moment(values.eduTime[1]).format('YYYY-MM')
+        const startTime = moment(values.eduTime[0]).format('YYYY/MM')
+        const endTime = moment(values.eduTime[1]).format('YYYY/MM')
         const forMatInfo = Object.assign(
           { ...values },
           {

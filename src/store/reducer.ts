@@ -8,12 +8,22 @@ import {
   selfPracticeReducer,
   selfSkillReducer,
   selfAwardsReducer,
-  SelfInfoProps
+  SelfInfoProps,
+  SelfWorkProps,
+  SelfEduProps,
+  SelfSchoolProps,
+  SelfProjectProps,
 } from 'src/pages/home/store'
 
 export interface ReducerMap {
   selfInfo: SelfInfoProps
-  
+  selfSkill: string
+  selfAwards: string
+  selfPractice: SelfWorkProps[]
+  selfEdu: SelfEduProps[]
+  selfSchool: SelfSchoolProps[]
+  selfProject: SelfProjectProps[]
+  selfWork: SelfWorkProps[]
 }
 
 export default combineReducers({

@@ -31,7 +31,7 @@ export function selfInfoReducer(
 ): SelfInfoProps {
   switch (action.type) {
     case ActionEnums.ChangeSelfInfo:
-      return Object.assign(state, action.payload)
+      return Object.assign({ ...state }, action.payload) // 这里需要用 拓展语法和Object.assign一起使用
     default:
       return state
   }

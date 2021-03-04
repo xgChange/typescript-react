@@ -9,6 +9,7 @@ export interface SelfInfoProps {
   age: string
   phone: string
   email: string
+  [index: string]: string
 }
 
 export interface SelfWorkProps {
@@ -37,6 +38,7 @@ export interface SelfEduProps {
   profession: string
   eduLevel: string
   eduTime: string[]
+  [index: string]: any
 }
 
 export interface ChangeSelfWorkAction {
