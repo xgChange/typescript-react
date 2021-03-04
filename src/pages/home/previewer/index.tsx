@@ -3,6 +3,7 @@ import React, { memo } from 'react'
 import { Button } from 'antd'
 import { DownloadOutlined } from '@ant-design/icons'
 import styles from './style.module.scss'
+import ShowSelfInfo from './show-selfinfo/index'
 
 const Previewer: React.FC = () => {
   const handleClick = () => {
@@ -23,7 +24,9 @@ const Previewer: React.FC = () => {
         </Button>
       </div>
 
-      <div className={styles.container}>preiver</div>
+      <div className={styles.container}>
+        <ShowSelfInfo/>
+      </div>
     </div>
   )
 }

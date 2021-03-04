@@ -1,6 +1,8 @@
 .previewer {
   flex: 1;
   padding: 12px;
+  display: flex;
+  flex-direction: column;
   .top-title {
     width: 100%;
     background-color: #ffffff;
@@ -12,7 +14,7 @@
   }
 
   .container {
-    height: 100%;
+    flex: 1;
     overflow: auto;
     background-color: #ffffff;
   }

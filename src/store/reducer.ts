@@ -8,7 +8,13 @@ import {
   selfPracticeReducer,
   selfSkillReducer,
   selfAwardsReducer,
+  SelfInfoProps
 } from 'src/pages/home/store'
+
+export interface ReducerMap {
+  selfInfo: SelfInfoProps
+  
+}
 
 export default combineReducers({
   selfInfo: selfInfoReducer,

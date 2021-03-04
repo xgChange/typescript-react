@@ -7,7 +7,6 @@ import { ActionEnums } from './constant'
 export interface SelfInfoProps {
   username: string
   age: string
-  sex: string
   phone: string
   email: string
 }

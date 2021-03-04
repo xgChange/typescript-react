@@ -2,10 +2,10 @@
  * @description 个人信息 组件
  */
 import React, { memo, useCallback } from 'react'
-import { Form, Input, Select, Button } from 'antd'
+import { Form, Input, Button } from 'antd'
 
 import styles from './style.module.scss'
-import { SexOption } from 'src/mock/index'
+// import { SexOption } from 'src/mock/index'
 import { phonePattern, numberPattern } from 'src/utils/index'
 import { useDispatch } from 'react-redux'
 import { changeSelfInfo } from '../../store'
@@ -53,7 +53,7 @@ const MyForm: React.FC = () => {
           <Input />
         </Form.Item>
 
-        <Form.Item label="性别" name="sex" rules={[{ required: true, message: '性别不能为空' }]}>
+        {/* <Form.Item label="性别" name="sex" rules={[{ required: true, message: '性别不能为空' }]}>
           <Select>
             {SexOption.map((item) => (
               <Select.Option value={item.value} key={item.id}>
@@ -61,7 +61,7 @@ const MyForm: React.FC = () => {
               </Select.Option>
             ))}
           </Select>
-        </Form.Item>
+        </Form.Item> */}
 
         <Form.Item
           label="手机号"
