@@ -1,14 +1,8 @@
-import React, { Fragment, memo } from 'react'
+import React, { memo } from 'react'
 import { shallowEqual, useSelector } from 'react-redux'
-import { Divider } from 'antd'
 
-import { filterObj } from 'src/utils/index'
-import { ReducerMap } from 'src/store/reducer'
-import ContainerMd from 'src/components/common/container-md'
-import TitleHeader from 'src/components/common/title-header'
-import ListItemHeader from 'src/components/common/list-item-header'
-
-import styles from './style.module.scss'
+import {ReducerMap} from 'src/store/reducer'
+import ItemContainer from 'src/components/item-container'
 
 const ShowSelfSkill = () => {
   const { selfWork } = useSelector(
@@ -18,25 +12,8 @@ const ShowSelfSkill = () => {
     shallowEqual
   )
 
-  const gapPaddingClass = selfWork.length > 1 ? 'gap-padding' : ''
-
   return (
-    <>
-      {Object.keys(selfWork).length > 0 && (
-        <div className={styles['show-selfwork']}>
-          <TitleHeader title="工作经历" />
-          <div className={`${styles['content']}`}>
-            {selfWork.map((item, index) => (
-              <div className={`${gapPaddingClass}`} key={index}>
-                {<ListItemHeader headerData={filterObj(item, 'detail')} />}
-                <ContainerMd content={item['detail']} />
-              </div>
-            ))}
-          </div>
-          <Divider style={{ margin: '12px 0 12px 0' }} />
-        </div>
-      )}
-    </>
+    <ItemContainer itemData={selfWork} title="工作经历" />
   )
 }
 
