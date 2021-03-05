@@ -45,6 +45,12 @@ body,
   align-items: center;
 }
 
+.all-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .colum {
   &-left {
     display: flex;
@@ -84,4 +90,11 @@ body,
   .print-content {
     padding: 0 40px 0 40px;
   }
+}
+
+// 重置antdesign的样式
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background: transparent;
+  color: #000;
 }

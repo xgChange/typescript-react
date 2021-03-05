@@ -17,3 +17,10 @@ export enum PositionClass {
   right = 'colum-right',
   center = 'colum-center',
 }
+
+export interface SettingMenuItem {
+  id: number
+  content: string
+  type: string
+  value: string
+}

@@ -2,7 +2,7 @@
  * @description 一些mock数据
  */
 
-import { PanelDataObj } from '../utils/interface'
+import { PanelDataObj, SettingMenuItem } from '../utils/interface'
 
 export const NavPanelData: PanelDataObj[] = [
   {
@@ -111,4 +111,14 @@ export const eduOption = [
     name: '小学',
     value: '小学',
   },
+]
+
+
+export const settingMenu: SettingMenuItem[] = [
+  {
+    id: 120,
+    content: 'markdown语法',
+    type: 'check',
+    value: '0'
+  }
 ]

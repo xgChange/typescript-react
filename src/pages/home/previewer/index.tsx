@@ -15,6 +15,7 @@ import ShowSelfPractice from './show-selfpractice'
 import ShowSelfSchool from './show-selfschool'
 
 const Previewer: React.FC = () => {
+  console.log('Home')
   const contentRef = useRef(null)
   const handleClick = useReactToPrint({
     content: () => contentRef.current,

@@ -40,6 +40,11 @@ $navHeight: 80px;
         border-bottom: 1px dashed #d9d9d9;
         color: #d9d9d9;
         font-size: 18px;
+        &:focus{
+          font-weight: 700;
+          box-shadow: none;
+          outline: none;
+        }
       }
       label {
         text-align: center;
@@ -47,6 +52,17 @@ $navHeight: 80px;
         color: #fff;
         opacity: 0.5;
         font-size: 19px;
+      }
+    }
+  }
+  .header-right{
+    font-size: 22px;
+    width: 50px;
+    text-align: center;
+    .setting {
+      cursor: pointer;
+      &:hover {
+        opacity: .2;
       }
     }
   }
