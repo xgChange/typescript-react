@@ -50,19 +50,38 @@ body,
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    p {
+      text-align: left;
+    }
   }
   &-right {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    p {
+      text-align: right;
+    }
   }
   &-center {
     display: flex;
     flex-direction: column;
     align-items: center;
+    p {
+      text-align: center;
+    }
   }
 }
 
 .gap-padding {
   padding-bottom: 10px;
+}
+
+@media print {
+  html,
+  body {
+    background-color: #ffffff;
+  }
+  .print-content {
+    padding: 0 40px 0 40px;
+  }
 }

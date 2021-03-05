@@ -12,15 +12,12 @@
       display: inline-block;
     }
   }
-  @media print {
-    .container {
-      flex: 1;
-      overflow: auto;
-      background-color: #ffffff;
-      .main-content {
-        padding: 0 40px 0 40px;
-      }
+  .container {
+    flex: 1;
+    overflow: auto;
+    background-color: #ffffff;
+    .main-content {
+      padding: 0 40px 0 40px;
     }
   }
-  
 }

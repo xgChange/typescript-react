@@ -1,4 +1,5 @@
 import React, { memo, useRef } from 'react'
+import { useReactToPrint } from 'react-to-print'
 
 import { Button } from 'antd'
 import { DownloadOutlined } from '@ant-design/icons'
@@ -14,9 +15,10 @@ import ShowSelfPractice from './show-selfpractice'
 import ShowSelfSchool from './show-selfschool'
 
 const Previewer: React.FC = () => {
-  const handleClick = () => {
-    window.print()
-  }
+  const contentRef = useRef(null)
+  const handleClick = useReactToPrint({
+    content: () => contentRef.current,
+  })
   return (
     <div className={styles.previewer}>
       <div className={styles['top-title']}>
@@ -32,9 +34,9 @@ const Previewer: React.FC = () => {
         </Button>
       </div>
 
-      <div className={styles.container}>
-        <ShowSelfInfo />
-        <div className={styles['main-content']}>
+      <div className={styles.container} ref={contentRef}>
+        <ShowSelfInfo position="center" />
+        <div className={`${styles['main-content']} print-content`}>
           <ShowSelfEdu />
           <ShowSelfSkill />
           <ShowSelfWork />
