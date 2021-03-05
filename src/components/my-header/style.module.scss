@@ -40,7 +40,7 @@ $navHeight: 80px;
         border-bottom: 1px dashed #d9d9d9;
         color: #d9d9d9;
         font-size: 18px;
-        &:focus{
+        &:focus {
           font-weight: 700;
           box-shadow: none;
           outline: none;
@@ -55,15 +55,24 @@ $navHeight: 80px;
       }
     }
   }
-  .header-right{
+  .header-right {
     font-size: 22px;
     width: 50px;
     text-align: center;
     .setting {
       cursor: pointer;
       &:hover {
-        opacity: .2;
+        opacity: 0.2;
       }
     }
+  }
+}
+.menu-container {
+  .menu-item {
+    user-select: none;
+  }
+
+  .actived {
+    color: green;
   }
 }

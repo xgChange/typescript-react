@@ -98,3 +98,7 @@ body,
   background: transparent;
   color: #000;
 }
+
+.ant-input-textarea-show-count::after {
+  color: #e5e5e5;
+}

@@ -17,7 +17,7 @@ export default memo(function index() {
   }
   return (
     <div className="top-bot-layout">
-      <MyHeader onInputValue={getInputValue} onMenuChange={getMenuChangeData}/>
+      <MyHeader onInputValue={getInputValue} onMenuChange={getMenuChangeData} />
       {/* 以后这里填 renderRoutes */}
       <ResumName.Provider value={resumName}>
         <ShowMarkdown.Provider value={useMarkdown}>
@@ -25,9 +25,7 @@ export default memo(function index() {
             <MyHome />
           </div>
         </ShowMarkdown.Provider>
-
       </ResumName.Provider>
-      
     </div>
   )
 })

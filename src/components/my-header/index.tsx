@@ -1,20 +1,34 @@
-import React, { ChangeEvent, memo, PropsWithChildren, useCallback, useState } from 'react'
+import React, { ChangeEvent, memo, PropsWithChildren, useState } from 'react'
 
 import MySvg from '../svg/index'
 import styles from './style.module.scss'
-import { Input, message, Dropdown } from 'antd'
-import {SettingOutlined} from '@ant-design/icons'
-import {settingMenu} from 'src/mock'
-import MyMenu from 'src/components/my-menu'
-import { SettingMenuItem} from 'src/utils'
+import { Input, message, Dropdown, Menu } from 'antd'
+import { SettingOutlined, CheckOutlined } from '@ant-design/icons'
+import { settingMenu } from 'src/mock'
+import { SettingMenuItem } from 'src/utils'
 
 interface MyHeaderProps {
   onInputValue?: (val: string) => void
   onMenuChange?: (val: any) => void
 }
 
-export default memo(function index({ onInputValue, onMenuChange }: PropsWithChildren<MyHeaderProps>) {
-  console.log('header')
+const handleItemContent = (item: SettingMenuItem) => {
+  if (item.type === 'check') {
+    const activedClass = item.value === '1' ? styles['actived'] : ''
+    return (
+      <>
+        <CheckOutlined className={activedClass} />
+        <span className={activedClass}>{item.content}</span>
+      </>
+    )
+  }
+  return item.content
+}
+
+export default memo(function index({
+  onInputValue,
+  onMenuChange,
+}: PropsWithChildren<MyHeaderProps>) {
   const [menuData, setMenuData] = useState<SettingMenuItem[]>(settingMenu)
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -25,13 +39,14 @@ export default memo(function index({ onInputValue, onMenuChange }: PropsWithChil
     onInputValue && onInputValue(value)
   }
 
-  const onChangeKey = (key: string) => {
-    const newData = menuData.map(item => {
+  const onChangeKey = ({ key }: any) => {
+    const newData = menuData.map((item) => {
       if (item.id === parseInt(key)) {
         if (key === '120') {
           const changeValue = item.value === '0' ? '1' : '0'
+          changeValue === '1' && message.success('已启用markdown语法')
           onMenuChange && onMenuChange(changeValue)
-          return {...item, value: changeValue}
+          return { ...item, value: changeValue }
         }
       }
       return item
@@ -39,9 +54,15 @@ export default memo(function index({ onInputValue, onMenuChange }: PropsWithChil
     setMenuData(newData)
   }
 
-  const showMenu = useCallback(() => {
-    return <MyMenu menuData={menuData} onChangeKey={onChangeKey}/>
-  }, [menuData])
+  const menu = (
+    <Menu onClick={onChangeKey} className={styles['menu-container']}>
+      {menuData.map((item) => (
+        <Menu.Item key={item.id} className={styles['menu-item']}>
+          {handleItemContent(item)}
+        </Menu.Item>
+      ))}
+    </Menu>
+  )
 
   return (
     <div className={styles['header-container']}>
@@ -56,7 +77,7 @@ export default memo(function index({ onInputValue, onMenuChange }: PropsWithChil
         </div>
       </div>
       <div className={`${styles['header-right']} all-center`}>
-        <Dropdown overlay={showMenu}>
+        <Dropdown overlay={menu} trigger={['click']}>
           <SettingOutlined className={styles['setting']} />
         </Dropdown>
       </div>
