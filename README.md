@@ -16,3 +16,5 @@
 - `yarn start`
 
 - `yarn build`
+
+## 测试一下 git 双用户
